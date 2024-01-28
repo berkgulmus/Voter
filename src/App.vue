@@ -1,12 +1,18 @@
 <template>
   <div :class="stylex(styles.root)">stylex</div>
-  <Button>Click me</Button>
+  <PokemonCard pokemon-name="ditto"></PokemonCard>
+  <Button variant="secondary">asad</Button>
+  <Button variant="destructive">asad</Button>
+  <Button>asad</Button>
   <RouterView />
 </template>
 <script setup lang="ts">
 import stylex from '@stylexjs/stylex'
 import { RouterLink, RouterView } from 'vue-router'
 import { Button } from '@/components/ui/button'
+import { useQuery } from '@tanstack/vue-query'
+import { getPokemon } from './api/pokemon'
+import PokemonCard from '@/components/PokemonCard.vue'
 </script>
 
 <script lang="ts">
