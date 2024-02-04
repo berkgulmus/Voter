@@ -3,3 +3,7 @@ export const getPokemon = async (pokemonName: string) => {
     response.json()
   )
 }
+
+export const generalizedGet = async (url: string) => {
+  return await fetch(url).then((response) => response.json())
+}
